@@ -4,17 +4,21 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "knex": "^0.14.6",
     "morgan": "^1.9.0",
+    "pg": "^7.4.3",
     "sqlite3": "^4.0.1"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "nodemon": "^1.17.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js -o -l -H 127.0.0.1"
+    "dev": "nodemon index.js -o -l -H 127.0.0.1",
+    "staging": "cross-env NODE_ENV=staging nodemon index.js -o -l -H 127.0.0.1"
   },
   "author": "Fernnado Fox",
   "license": "ISC"
