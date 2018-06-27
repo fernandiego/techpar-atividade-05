@@ -2,7 +2,7 @@ angular.module("atividade04").controller("pessoacontroller", function(pessoaserv
 
     this.novo = {};
   
-    this.listar = () => pessoaservice.buscapessoas().then( (ret) => {
+    this.listar = () => pessoaservice.buscapessoa().then( (ret) => {
       this.pessoas = ret.data;
     });
   
@@ -10,6 +10,8 @@ angular.module("atividade04").controller("pessoacontroller", function(pessoaserv
     this.listar();
   
     this.salvapessoa = () => {
+      console.log("estive aqui GDE CV ")
+      console.log(this.novo)
       pessoaservice.salvapessoa(this.novo).then( (ret) => {
         alert("pessoa salvo com id "+ret.data.idpessoa);
         this.listar();

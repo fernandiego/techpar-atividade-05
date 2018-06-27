@@ -11,7 +11,8 @@ app.use(express.static("public"))
 
 app.use(morgan("dev"))
 
-app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json())
 
 
 app.get("/hello", (req, res) => {

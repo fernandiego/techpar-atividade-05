@@ -22,27 +22,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
 
-<body ng-controller="pessoacontroller">
+<body ng-controller="pessoacontroller as pc">
   <h1>Hello</h1>
-  <p>world!</p>
-  <form class="bordado" ng-controller="pessoacontroller">
+  <form class="bordado" ng-submit="pc.salvapessoa()">
     <label>
       Nome
-      <input id="nome" name="nomepessoa" required/>
+      <input id="nome" ng-model="pc.novo.nomepessoa" required/>
     </label>
     <br/>
     <label>
       Telefone
-      <input name="telefonepessoa" required/>
-    </label>
-    <br/>
-    <label>
-      {{nome}}
-      <input ng-model="nome" />
+      <input ng-model="pc.novo.telefonepessoa" required/>
     </label>
     <br/>
     <input type="submit" />
   </form>
+  <div ng-repeat="p in pc.pessoas">
+    {{p.nomepessoa}}
+    
+  </div>
 
   <script type="text/javascript" src="modulo.js"></script>
   <script type="text/javascript" src="controllers.js"></script>
