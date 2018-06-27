@@ -1,20 +1,13 @@
-Atividade 03
+Atividade 04
 
-    similar à atividade 02, batizar reppositório git de "techpar-atividade-03"
-    adicionar um documento html que o express deverá servir
-    o documento deverá estar dentro da pasta public, que deverá ser a pasta de conteúdo estático do express
-        procurar na documentação oficial do express como servir arquivos estáticos
-        compreender a interação no cliente e no servidor dos arquivos dentro e fora da pasta estática
-    alterar o verbo HTTP do /save de GET para POST
-    o documento html deverá ter um formulário html cujos campos tem mesmo nome das colunas da tabela pessoa
-        o action do form deve ser o /save e method deve ser POST
-    adicionar ao express o middleware que permite acessar o req.body das requisições
-        os campos do formulário devem constar dentro do req.body (ex. req.body.nomepessoa)
-    o retorno da rota /save deve ser o json recebido do formulário adicionado do idpessoa (ex. {"idpessoa":"1","nomepessoa":"Joao", "telefonepessoa":"12345678"})
-    assim como a atividade 3, migrates de criação de esquema de dados devem ser criados
-    o app deve verificar a variável de ambiente NODE_ENV para escolher o perfil do knex no knexfile.js
-    os perfils, development e staging, devem ser preparados para uso
-        preferencialmente, development com sqlite3 e staging com postgresql
-        a instalação e configuração do postgresql não é parte da atividade. caso não tenha um disponível pode usar sqlite novamente, com outro nome para a base.
-    além do script "dev" no package.json, colocar também o script "staging"  - "npm run staging" deve fazer o mesmo que "npm run dev", adicionando apenas a variável de ambiente NODE_ENV=staging
-    prazo de 16h para entrega
+    deve fazer tudo o que a atividade 03 fez, com algumas alterações
+    o repositório git deve se chamar "techpar-atividade-04"
+    em vez de action direto no form, o documento html deverá conter um módulo angularjs 1.x
+    o módulo deve conter um controller pra gerenciar o ng-submit do form
+    o controller deve usar o serviço $http para submeter via POST os dados do formulário
+    não devemos mais usar o modo form/urlencoded no middleware do express. em vez disso devemos usar o modo json e mandar json para o express tratar
+    o serviço $http deve ainda listar todas as pessoas salvas no documento html.
+    usar o ng-repeat para gerar uma tabela com as pessoas salvas abaixo do formulário de salvamento
+    ao entrar na tela o angular já deve buscar possíveis pessoas salvas para listar
+    toda vez que salvar uma pessoa a lista deve ser recuperada novamente
+
