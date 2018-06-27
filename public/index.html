@@ -1,45 +1,52 @@
-<html>
-  <head>
-    <!-- Comentário -->
-    <title>Hello World!</title>
-    <style>
-      h1 {
-        font-size:96px;
-      }
+<html ng-app="atividade04">
 
-      .bordado {
-        border: 3px solid red;
-        min-height: 100px;
-        max-width: 300px;
-      }
+<head>
+  <!-- Comentário -->
+  <title>Hello World!</title>
+  <style>
+    h1 {
+      font-size: 96px;
+    }
 
-      #nome {
-        border: 5px double blue;
+    .bordado {
+      border: 3px solid red;
+      min-height: 100px;
+      max-width: 300px;
+    }
 
-      }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-  </head>
-  <body ng-app>
-    <h1>Hello</h1>
-    <p>world!</p>
-    <form class="bordado" method="POST" action="save">
-      <label>
-        Nome
-        <input id="nome" name="nomepessoa" required/>
-      </label>
-      <br/>
-      <label>
-        Telefone
-        <input name="telefonepessoa" required/>
-      </label>
-      <br/>
-      <label>
-        {{nome}}
-        <input ng-model="nome" />
-      </label>
-      <br/>
-      <input type="submit"/>
-    </form>
-  </body>
+    #nome {
+      border: 5px double blue;
+
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body ng-controller="pessoacontroller">
+  <h1>Hello</h1>
+  <p>world!</p>
+  <form class="bordado" ng-controller="pessoacontroller">
+    <label>
+      Nome
+      <input id="nome" name="nomepessoa" required/>
+    </label>
+    <br/>
+    <label>
+      Telefone
+      <input name="telefonepessoa" required/>
+    </label>
+    <br/>
+    <label>
+      {{nome}}
+      <input ng-model="nome" />
+    </label>
+    <br/>
+    <input type="submit" />
+  </form>
+
+  <script type="text/javascript" src="modulo.js"></script>
+  <script type="text/javascript" src="controllers.js"></script>
+  <script type="text/javascript" src="servicos.js"></script>
+</body>
+
 </html>
