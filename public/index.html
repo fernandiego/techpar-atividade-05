@@ -37,11 +37,12 @@
     <br/>
     <input type="submit" />
   </form>
-  <div ng-repeat="p in pc.pessoas">
-    {{p.nomepessoa}}
-    
-  </div>
+  <table border="1px">
+    <tr ng-repeat="p in pc.pessoas">
+      <td>{{p.nomepessoa}}</td>
 
+    </tr>
+  </table>
   <script type="text/javascript" src="modulo.js"></script>
   <script type="text/javascript" src="controllers.js"></script>
   <script type="text/javascript" src="servicos.js"></script>
