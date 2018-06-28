@@ -24,6 +24,7 @@ app.post("/save", (req, res) => {
   const pessoa = req.body
   console.log(pessoa)
   knex("pessoa").insert(pessoa, "idpessoa").then(ret => {
+      console.log(ret)
       res.send(ret)
   }).catch(err => {
     res.status(500).send(err)

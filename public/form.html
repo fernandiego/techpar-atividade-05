@@ -1,4 +1,4 @@
-<form class="bordado" ng-submit="pc.salvapessoa()">
+<div ng-controller="salvapessoacontroller as pc"><form class="bordado" ng-submit="pc.salvapessoa()">
     <label>
       Nome
       <input id="nome" ng-model="pc.novo.nomepessoa" required/>
@@ -11,3 +11,4 @@
     <br/>
     <input type="submit" />
   </form>
+</div>
