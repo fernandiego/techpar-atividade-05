@@ -1,1 +1,1 @@
-angular.module("atividade04",[]);
+angular.module("atividade04", ["ngRoute"]);

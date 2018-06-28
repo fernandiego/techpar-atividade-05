@@ -19,12 +19,18 @@
 
     }
   </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
 </head>
 
 <body ng-controller="pessoacontroller as pc">
   <h1>Hello</h1>
-  <form class="bordado" ng-submit="pc.salvapessoa()">
+  <a href="#/form">Form</a>
+  <a href="#/listapessoa">Lista Pessoa</a>
+  <div ng-view>
+
+  </div>
+  <!-- <form class="bordado" ng-submit="pc.salvapessoa()">
     <label>
       Nome
       <input id="nome" ng-model="pc.novo.nomepessoa" required/>
@@ -36,16 +42,19 @@
     </label>
     <br/>
     <input type="submit" />
-  </form>
-  <table border="1px">
+  </form> -->
+  <!-- <table border="1px">
     <tr ng-repeat="p in pc.pessoas">
       <td>{{p.nomepessoa}}</td>
 
     </tr>
-  </table>
+  </table> -->
   <script type="text/javascript" src="modulo.js"></script>
   <script type="text/javascript" src="controllers.js"></script>
+  <!-- <script type="text/javascript" src="controllerlistapessoa.js"></script>
+  <script type="text/javascript" src="controllersalvapessoa.js"></script> -->
   <script type="text/javascript" src="servicos.js"></script>
+  <script type="text/javascript" src="router.js"></script>
 </body>
 
 </html>
